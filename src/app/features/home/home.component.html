@@ -1,0 +1,33 @@
+<section class="home-container">
+  <div class="hero-section">
+    <h1 class="hero-title">Technical Interview Practice</h1>
+    <p class="hero-subtitle">Sharpen your skills with real interview questions. Select a category and start practicing.</p>
+  </div>
+
+  <div class="categories-grid">
+    @for (category of categories; track category.id) {
+      <div class="category-card">
+        <div class="card-icon">{{ category.icon }}</div>
+        <div class="card-content">
+          <h3 class="card-title">{{ category.name }}</h3>
+          <p class="card-description">{{ category.description }}</p>
+          <div class="card-meta">
+            <span class="question-count">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+                <rect x="9" y="3" width="6" height="4" rx="2"/>
+              </svg>
+              {{ category.questionCount }} Questions
+            </span>
+          </div>
+        </div>
+        <button class="start-btn" (click)="startInterview(category)">
+          Start Interview
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+    }
+  </div>
+</section>

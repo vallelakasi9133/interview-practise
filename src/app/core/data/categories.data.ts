@@ -1,0 +1,26 @@
+import { Category } from '../models/category.model';
+
+export const CATEGORIES_DATA: Category[] = [
+  { id: 1, name: 'Angular', slug: 'angular', description: 'Test your Angular knowledge with practical interview questions covering components, services, RxJS, and more.', icon: '🅰️', questionCount: 40, isActive: true },
+  { id: 2, name: 'TypeScript', slug: 'typescript', description: 'Explore TypeScript type system, generics, utility types, and advanced typing patterns.', icon: '🔷', questionCount: 20, isActive: true },
+  { id: 3, name: 'JavaScript', slug: 'javascript', description: 'Master JavaScript fundamentals including closures, promises, event loop, and ES6+ features.', icon: '🟨', questionCount: 35, isActive: true },
+  { id: 4, name: 'HTML', slug: 'html', description: 'Strengthen your HTML knowledge covering semantics, accessibility, and web APIs.', icon: '🌐', questionCount: 15, isActive: true },
+  { id: 5, name: 'CSS', slug: 'css', description: 'Practice CSS concepts including Flexbox, Grid, animations, and responsive design.', icon: '🎨', questionCount: 15, isActive: true },
+  { id: 6, name: '.NET', slug: 'dotnet', description: 'Deep dive into .NET runtime, CLR, garbage collection, async programming, and more.', icon: '🟣', questionCount: 15, isActive: true },
+  { id: 7, name: 'ASP.NET Core', slug: 'aspnet-core', description: 'Cover ASP.NET Core middleware, DI, routing, and Web API development patterns.', icon: '🔵', questionCount: 35, isActive: true },
+  { id: 8, name: 'Web API', slug: 'web-api', description: 'Practice REST API design, HTTP methods, status codes, and API best practices.', icon: '🔌', questionCount: 30, isActive: true },
+  { id: 9, name: 'Entity Framework Core', slug: 'ef-core', description: 'Master EF Core including migrations, queries, change tracking, and performance.', icon: '🗄️', questionCount: 20, isActive: true },
+  { id: 10, name: 'C#', slug: 'csharp', description: 'Practice C# language features, SOLID principles, patterns, and async programming.', icon: '💜', questionCount: 40, isActive: true },
+  { id: 11, name: 'SQL Server', slug: 'sql-server', description: 'Cover SQL queries, indexing, transactions, performance tuning, and database design.', icon: '🛢️', questionCount: 35, isActive: true },
+  { id: 12, name: 'Microservices', slug: 'microservices', description: 'Explore distributed systems, patterns, messaging, and microservice architecture.', icon: '🔗', questionCount: 15, isActive: true },
+  { id: 13, name: 'Full Stack', slug: 'full-stack', description: 'A comprehensive mix of questions across Angular, .NET, C#, SQL, and more for a realistic full-stack interview.', icon: '🚀', questionCount: 20, isActive: true },
+  { id: 14, name: 'Mixed Interview', slug: 'mixed', description: 'Randomly selected questions from all categories for unpredictable interview preparation.', icon: '🎲', questionCount: 20, isActive: true },
+  { id: 15, name: 'ASP.NET MVC', slug: 'aspnet-mvc', description: 'Cover MVC architecture, routing, filters, model binding, Razor views, and request lifecycle.', icon: '🏗️', questionCount: 20, isActive: true },
+  { id: 16, name: 'ADO.NET', slug: 'ado-net', description: 'Practice connected and disconnected architectures, SqlCommand, DataReader, DataSet, and transactions.', icon: '🔧', questionCount: 20, isActive: true },
+  { id: 17, name: 'jQuery', slug: 'jquery', description: 'Cover jQuery selectors, AJAX, DOM manipulation, events, and Web API integration.', icon: '📜', questionCount: 20, isActive: true },
+  { id: 18, name: 'Design Patterns', slug: 'design-patterns', description: 'Repository, Unit of Work, Factory, Singleton, CQRS, Clean Architecture, and SOLID principles.', icon: '🧩', questionCount: 20, isActive: true },
+  { id: 19, name: 'Coding Round', slug: 'coding-round', description: 'Practice coding problems: string manipulation, arrays, LINQ, algorithms, and real-world scenarios.', icon: '💻', questionCount: 20, isActive: true },
+  { id: 20, name: 'System Design', slug: 'system-design', description: 'Design scalable .NET applications: E-Commerce, Banking, Hospital Management, and more.', icon: '🏛️', questionCount: 15, isActive: true },
+  { id: 21, name: 'Scenario Questions', slug: 'scenario-questions', description: 'Real-world 4-5 year experience interview scenarios covering architecture, performance, and troubleshooting.', icon: '🎯', questionCount: 25, isActive: true },
+  { id: 22, name: 'HR / General', slug: 'hr-general', description: 'Common HR and behavioral interview questions: self-introduction, strengths, weaknesses, salary, notice period, and more.', icon: '🤝', questionCount: 30, isActive: true },
+];

@@ -1,0 +1,384 @@
+.result-container
+  max-width: 80%
+  margin: 0 auto
+  padding: 2rem 1.5rem
+
+.result-card
+  background: rgba(255, 255, 255, 0.04)
+  border: 1px solid rgba(255, 255, 255, 0.1)
+  border-radius: 20px
+  padding: 2.5rem
+  backdrop-filter: blur(10px)
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3)
+
+.result-header
+  text-align: center
+  margin-bottom: 2rem
+  padding-bottom: 2rem
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08)
+
+.checkmark-circle
+  width: 64px
+  height: 64px
+  background: rgba(16, 185, 129, 0.15)
+  border: 2px solid rgba(16, 185, 129, 0.4)
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto 1rem
+  color: #10b981
+
+.result-title
+  font-size: 1.75rem
+  font-weight: 700
+  color: #ffffff
+  margin: 0 0 0.375rem
+
+.result-subtitle
+  font-size: 1rem
+  color: rgba(255, 255, 255, 0.6)
+  margin: 0
+
+.stats-grid
+  display: grid
+  grid-template-columns: repeat(5, 1fr)
+  gap: 0.75rem
+  margin-bottom: 2rem
+
+.stat-card
+  text-align: center
+  padding: 1.25rem 0.75rem
+  border-radius: 12px
+  border: 1px solid rgba(255, 255, 255, 0.1)
+  background: rgba(255, 255, 255, 0.03)
+
+.stat-value
+  display: block
+  font-size: 1.75rem
+  font-weight: 700
+  margin-bottom: 0.25rem
+
+.stat-label
+  display: block
+  font-size: 0.7rem
+  color: rgba(255, 255, 255, 0.5)
+  text-transform: uppercase
+  letter-spacing: 0.5px
+  font-weight: 600
+
+.stat-total
+  .stat-value
+    color: #ffffff
+
+.stat-attempted
+  border-color: rgba(16, 185, 129, 0.3)
+  .stat-value
+    color: #34d399
+
+.stat-timeout
+  border-color: rgba(239, 68, 68, 0.3)
+  .stat-value
+    color: #f87171
+
+.stat-rate
+  border-color: rgba(99, 102, 241, 0.3)
+  .stat-value
+    color: #818cf8
+
+.stat-skipped
+  border-color: rgba(251, 146, 60, 0.3)
+  .stat-value
+    color: #fb923c
+
+.completion-section
+  margin-bottom: 2rem
+  padding: 1.25rem
+  background: rgba(255, 255, 255, 0.03)
+  border-radius: 12px
+  border: 1px solid rgba(255, 255, 255, 0.08)
+
+.completion-header
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 0.75rem
+  font-size: 0.9rem
+  color: rgba(255, 255, 255, 0.6)
+  font-weight: 500
+
+.completion-percent
+  font-weight: 700
+  color: #ffffff
+
+.completion-bar-bg
+  height: 10px
+  background: rgba(255, 255, 255, 0.1)
+  border-radius: 5px
+  overflow: hidden
+
+.completion-bar
+  height: 100%
+  border-radius: 5px
+  transition: width 0.5s ease
+
+  &.bar-good
+    background: linear-gradient(90deg, #10b981, #059669)
+
+  &.bar-medium
+    background: linear-gradient(90deg, #f59e0b, #d97706)
+
+  &.bar-low
+    background: linear-gradient(90deg, #ef4444, #dc2626)
+
+.summary-section
+  margin-bottom: 2rem
+
+.section-title
+  font-size: 1rem
+  font-weight: 600
+  color: #ffffff
+  margin: 0 0 1rem
+
+.skipped-section
+  margin-bottom: 2rem
+  border: 2px solid #f97316
+  border-radius: 16px
+  padding: 2rem
+  background: linear-gradient(135deg, #fff7ed 0%, #fffbeb 100%)
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.12)
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    height: 4px
+    background: linear-gradient(90deg, #f97316, #ea580c, #dc2626)
+
+.skipped-title
+  display: flex
+  align-items: center
+  gap: 0.625rem
+  color: #c2410c
+  font-size: 1.15rem
+  font-weight: 800
+  letter-spacing: -0.3px
+
+  svg
+    color: #ea580c
+    width: 22px
+    height: 22px
+
+.skipped-list
+  display: flex
+  flex-direction: column
+  gap: 0.875rem
+
+.skipped-item
+  display: flex
+  flex-direction: column
+  gap: 0.75rem
+  padding: 1.125rem 1.25rem
+  background: #ffffff
+  border: 1px solid #fdba74
+  border-radius: 10px
+  box-shadow: 0 2px 8px rgba(249, 115, 22, 0.08)
+  transition: transform 0.15s ease, box-shadow 0.15s ease
+
+  &:hover
+    transform: translateX(4px)
+    box-shadow: 0 4px 12px rgba(249, 115, 22, 0.15)
+
+.skipped-top
+  display: flex
+  align-items: flex-start
+  gap: 1rem
+
+.skipped-number
+  flex-shrink: 0
+  font-size: 0.75rem
+  font-weight: 800
+  color: #ffffff
+  background: linear-gradient(135deg, #f97316, #ea580c)
+  padding: 0.375rem 0.625rem
+  border-radius: 6px
+  letter-spacing: 0.3px
+  text-transform: uppercase
+  box-shadow: 0 2px 4px rgba(234, 88, 12, 0.3)
+
+.skipped-text
+  font-size: 0.95rem
+  color: #1e293b
+  line-height: 1.6
+  font-weight: 600
+
+.skipped-actions
+  display: flex
+  justify-content: flex-end
+
+.btn-show-answer
+  display: inline-flex
+  align-items: center
+  gap: 0.375rem
+  padding: 0.5rem 1rem
+  background: linear-gradient(135deg, #059669, #10b981)
+  color: #ffffff
+  border: none
+  border-radius: 8px
+  font-size: 0.8rem
+  font-weight: 700
+  cursor: pointer
+  transition: transform 0.15s ease, box-shadow 0.2s ease
+  box-shadow: 0 2px 6px rgba(5, 150, 105, 0.3)
+
+  &:hover
+    transform: translateY(-1px)
+    box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4)
+
+  &:active
+    transform: translateY(0)
+
+.answer-panel
+  background: linear-gradient(135deg, #ecfdf5, #f0fdf4)
+  border: 2px solid #6ee7b7
+  border-radius: 10px
+  padding: 1.25rem
+  animation: slideDown 0.2s ease
+
+.answer-label
+  display: flex
+  align-items: center
+  gap: 0.375rem
+  font-size: 0.8rem
+  font-weight: 700
+  color: #059669
+  text-transform: uppercase
+  letter-spacing: 0.5px
+  margin-bottom: 0.5rem
+
+  svg
+    color: #059669
+
+.answer-text
+  font-size: 0.92rem
+  color: #1e293b
+  line-height: 1.7
+  margin: 0
+  font-weight: 500
+
+@keyframes slideDown
+  from
+    opacity: 0
+    transform: translateY(-8px)
+  to
+    opacity: 1
+    transform: translateY(0)
+
+.summary-title
+  font-size: 1.1rem
+  font-weight: 700
+  color: #ffffff
+  margin: 0 0 1rem
+
+.summary-list
+  max-height: 400px
+  overflow-y: auto
+  border: 1px solid rgba(255, 255, 255, 0.1)
+  border-radius: 12px
+  background: rgba(255, 255, 255, 0.02)
+
+.summary-item
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0.85rem 1.25rem
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06)
+
+  &:last-child
+    border-bottom: none
+
+.summary-number
+  font-size: 0.9rem
+  color: #e2e8f0
+  font-weight: 500
+
+.summary-status
+  display: flex
+  align-items: center
+  gap: 0.375rem
+  font-size: 0.8rem
+  font-weight: 600
+  padding: 0.25rem 0.625rem
+  border-radius: 6px
+
+  &.status-attempted
+    background: #f0fdf4
+    color: #16a34a
+
+  &.status-timeout
+    background: #fef2f2
+    color: #dc2626
+
+.result-actions
+  display: flex
+  gap: 1rem
+  padding-top: 1rem
+
+.btn-restart
+  flex: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.5rem
+  padding: 1rem 1.5rem
+  background: linear-gradient(135deg, #6366f1, #8b5cf6)
+  color: white
+  border: none
+  border-radius: 12px
+  font-size: 1rem
+  font-weight: 600
+  cursor: pointer
+  transition: all 0.2s ease
+
+  &:hover
+    background: linear-gradient(135deg, #4f46e5, #7c3aed)
+    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4)
+    transform: translateY(-2px)
+
+.btn-home
+  flex: 1
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: 0.5rem
+  padding: 1rem 1.5rem
+  background: rgba(255, 255, 255, 0.06)
+  color: #e2e8f0
+  border: 1px solid rgba(255, 255, 255, 0.15)
+  border-radius: 12px
+  font-size: 1rem
+  font-weight: 600
+  cursor: pointer
+  transition: all 0.2s ease
+
+  &:hover
+    background: rgba(255, 255, 255, 0.12)
+    border-color: rgba(255, 255, 255, 0.3)
+    transform: translateY(-2px)
+
+@media (max-width: 640px)
+  .stats-grid
+    grid-template-columns: repeat(2, 1fr)
+
+  .result-actions
+    flex-direction: column
+
+  .result-card
+    padding: 1.5rem
+
+  .stat-value
+    font-size: 1.5rem
